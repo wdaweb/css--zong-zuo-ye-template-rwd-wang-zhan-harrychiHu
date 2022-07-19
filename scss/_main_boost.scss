@@ -1,0 +1,116 @@
+/* main_boost ------------------------------------------------------------------------------------------- */
+
+.main{
+  .container{
+    .boost{
+      width: 100%;
+      padding: 0 1.5rem;
+      margin-top: 2rem;
+      font-family: $title;
+      background:url(../img/game_boost_bg.jpg) repeat center center/cover ;
+      box-shadow: 1px 3px 7px rgba(128,18,40,0.3),1px 3px 5px rgba(255, 255, 255,0.1);
+      border-radius: 5%;
+      .boost_title{
+        h2{
+          color: $white;
+          .play_icon{
+            margin-right: 0.5rem;
+          }
+          span,i{
+            color: $orange;
+          }
+        }
+      }
+      .boost_content{
+        padding: 1.5rem;
+        .console_content{
+          .game{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 1.5rem;
+            .game_title{
+              font-size: 4rem;
+              margin-right: 2rem;
+              color: $white;
+            }
+            .game_content{
+              h6{
+                margin: 0 0 0.5rem 0;
+                font-size: 1.5rem;
+                color: $white;
+              }
+              p{
+                margin: 0;
+                font-size: 1rem;
+                color: $orange;
+                font-family: $content;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  @include md{
+    .container{
+      .boost{
+        border-radius: 1%;
+        .boost_content{
+          .console_content{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            .game{
+              width: 50%;
+              text-align: center;
+              .game_title{
+                margin: 0;
+                width: 50%;
+              }
+              .game_content{
+                width: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include xl{
+    .container{
+      .boost{
+        .boost_content{
+          .console_content{
+            flex-wrap: nowrap;
+            width: 100%;
+            justify-content: space-around;
+            .game{
+              width: 30%;
+              margin-bottom: 0;
+              padding: 2rem;
+              .game_title{
+                font-size: 4rem;
+                width: 100%;
+              }
+              .game_content{
+                width: 100%;
+                text-align: left;
+                
+                h6{
+                  font-style: 3rem;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

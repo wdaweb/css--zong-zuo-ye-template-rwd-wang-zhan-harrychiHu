@@ -1,0 +1,110 @@
+/* footer ------------------------------------------------------------------------------------------- */
+
+.footer_end{
+  background: url('../img/footer_bg.jpg') no-repeat center center/cover;
+  width: 100%;
+  .footer_title{
+    text-align: center;
+    background: url('../img/footer_bg.jpg') no-repeat center center/cover;
+    padding: 2rem;
+    box-shadow: 1px 5px 5px rgba(1, 10, 24, 0.849);
+  }
+  .footer_list{
+    list-style: none;
+    margin-top: 3rem;
+    li{
+      margin-bottom: 1.5rem;
+      color: $gary;
+      line-height: 2rem;
+      i{
+        margin-right: 1rem;
+        color: $gary;
+      }
+    }
+    li:nth-child(1){
+      font-family: $title;
+      color: $white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding-bottom: 0.5rem;
+      position: relative;
+      &::after{
+        content: '';
+        width: 2.5rem;
+        height: 0.4rem;
+        background: $orange;
+        position: absolute;
+        left: 0;
+        bottom: -0.5rem;
+        border-radius: 0px 0px 5px 5px;
+      }
+    }
+  }
+  .footer_list:last-child{
+    li{
+      a{
+        text-decoration: none;
+        font-weight: bold;
+        color: $white;
+        transition: all 1s;
+        &:hover{
+          color: $orange;
+        }
+      }
+    }
+  }
+  .footer_list:nth-child(4),.footer_list:nth-child(3){
+    li{
+      border-bottom: 1px dashed $gary;
+      a{
+        text-decoration: none;
+        color: $gary;
+        width: 100%;
+        transition: all 1s;
+        font-weight: bold;
+        &:hover{
+          color: $orange;
+        }
+      }
+    }
+    li:nth-child(1){
+      border-bottom: transparent;
+    }
+    
+  }
+}
+.copyright{
+  background-color: #191c23;
+  width: 100%;
+  padding: 3rem 2rem;
+  color: $gary;
+  
+  span{
+    color: $orange;
+  }
+}
+
+@include md{
+  .footer_end{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .footer_title{
+      width: 100%;
+    }
+    ul{
+      width: 50%;
+    }
+  }
+  .copyright{
+    text-align: center;
+  }
+}
+
+@include xl{
+  .footer_end{
+    ul{
+      width: 25%;
+    }
+  }
+}

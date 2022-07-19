@@ -1,0 +1,219 @@
+/* main ------------------------------------------------------------------------------------------- */
+
+.main{
+  position: relative;
+  background: url('../img/section_bg01.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: $content;
+  .container{
+    .banner{
+      max-width: 100%;
+      margin-top: -8%;
+      height: 501px;
+      background: url('../img/slider_bg.jpg') no-repeat right center/cover;
+      border-radius: 10px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .banner_content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        text-align: center;
+        h6{
+          margin: 0 0 1rem 0;
+          font-size: 1.3rem;
+          color: $orange;
+          letter-spacing: 0.2rem;
+          padding: 0;
+        }
+        h2{
+          margin: 0 0 1.5rem 0;
+          color: $white;
+          font-size: 2.5rem;
+          padding: 0;
+        }
+        p{
+          margin: 0 0 2rem 0;
+          color: $white;
+          font-size: 1rem;
+          line-height: 1.6rem;
+          padding: 0 1.5rem;
+        }
+          a{
+            display: block;
+            background: url('../img/btn_bg.jpg') no-repeat center center/cover;
+            border-radius: 0.5rem;
+            margin: 0;
+            font-size: 1rem;
+            width: 133px;
+            height: 46px;
+            line-height: 46px;
+            text-decoration: none;
+            color: $white;
+            font-weight: bold;
+            margin: auto;
+            position: relative;
+            &::after{
+              content: '';
+              width: 133px;
+              height: 0.3rem;
+              position: absolute;
+              bottom: 0;
+              right: 50%;
+              transform: translate(50%);
+              background-color: #dd4407;
+              border-radius: 0 0 0.5rem 0.5rem;
+              transition: all 1s ease 0s;
+            }
+            &:hover::after{
+              background-color: transparent;
+            }
+          }
+      }
+    }
+    .boost{
+      width: 100%;
+      padding: 0 1.5rem;
+      margin-top: 2rem;
+      font-family: $title;
+      .boost_title{
+        h2{
+          color: $white;
+          .play_icon{
+            margin-right: 0.5rem;
+          }
+          span,i{
+            color: $orange;
+          }
+        }
+      }
+      .boost_content{
+        background:url(../img/game_boost_bg.jpg) repeat center center/cover ;
+        padding: 1.5rem;
+        border-radius: 5%;
+        box-shadow: 1px 3px 7px rgba(128,18,40,0.3),1px 3px 5px rgba(255, 255, 255,0.1);
+        .console_content{
+          .game{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 1.5rem;
+            .game_title{
+              font-size: 4rem;
+              margin-right: 2rem;
+              color: $white;
+            }
+            .game_content{
+              h6{
+                margin: 0 0 0.5rem 0;
+                font-size: 1.5rem;
+                color: $white;
+              }
+              p{
+                margin: 0;
+                font-size: 1rem;
+                color: $orange;
+                font-family: $content;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  @include md{
+    .container{
+      .banner{
+        margin-top: -5%;
+        background: url('../img/slider_bg.jpg') no-repeat center center/cover;
+      }
+      .boost{
+        .boost_content{
+          .console_content{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            .game{
+              width: 50%;
+              text-align: center;
+              .game_title{
+                margin: 0;
+                width: 50%;
+              }
+              .game_content{
+                width: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include lg{
+    .container{
+      .banner{
+        margin-top: -2%;
+        align-items: flex-end;
+        background: url('../img/slider_bg.jpg') no-repeat center center/cover;
+        .banner_content{
+          width: 30%;
+          margin-right: 6rem;
+          h6{
+            text-align: left;
+          }
+          h2{
+            text-align: left;
+          }
+          p{
+            text-align: left;
+            margin: 0 0 2rem 0;
+            padding: 0;
+          }
+          a{
+            margin: 0;
+            
+          }
+        }
+      }
+      .boost{
+        .boost_content{
+          .console_content{
+            flex-wrap: nowrap;
+            width: 100%;
+            justify-content: space-around;
+            .game{
+              width: 30%;
+              margin-bottom: 0;
+              padding: 2rem;
+              .game_title{
+                font-size: 4rem;
+                width: 100%;
+              }
+              .game_content{
+                width: 100%;
+                text-align: left;
+                
+                h6{
+                  font-style: 3rem;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

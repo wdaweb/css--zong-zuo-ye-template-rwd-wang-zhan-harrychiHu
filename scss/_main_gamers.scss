@@ -1,0 +1,124 @@
+/* gamers ----------------------------------------------------------------------------- */
+.gamers{
+  font-family: $content;
+  .gamers_title{
+    text-align: center;
+    margin-bottom: 2.5rem;
+    h6{
+      margin: 0;
+      font-size: 2rem;
+      color: $white;
+      position: relative;
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+      font-family: $title;
+      &::after{
+        content: '';
+        width: 128px;
+        height: 8px;
+        background: url('../img/title_shape.png') no-repeat center center/cover;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+      }
+      span{
+        color: $orange;
+      }
+      i{
+        color: $orange;
+        margin-right: 1rem;
+      }
+    }
+    p{
+      line-height: 2rem;
+      color: $gary;
+      font-weight: 400;
+    }
+  }
+  .gamers_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 3%;
+    position: relative;
+    margin-bottom: 3rem;
+    box-shadow: 1px 3px 7px rgba(17, 17, 24, 0.3),1px 3px 5px rgba(255, 255, 255,0.1);
+    img{
+      max-width: 100%;
+      border-top-left-radius: 3%;
+      border-top-right-radius: 3%;
+      
+    }
+    .gamers_card_body{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: rgb(37 38 52 / 0.8);
+      width: 100%;
+      padding-left: 2rem;
+      padding-bottom: 2rem;
+      .gamers_btn{
+        position: absolute;
+        top: -2rem;
+        background-color: $orange;
+        display: block;
+        text-decoration: none;
+        width: 6.5rem;
+        height: 2rem;
+        line-height: 2rem;
+        text-align: center;
+        color: $white;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        clip-path: polygon(15% 0, 100% 0, 87% 100%, 0 100%);
+        
+      }
+      h5{
+        font-size: 1.2rem;
+        margin: 2rem 0 0 0;
+        a{
+          color: $white;
+          text-decoration: none;
+          &:hover{
+            color: $orange;
+            transition: all 1s;
+          }
+        }
+      }
+      p{
+        margin: 1rem 0 0 0;
+        color: $gary;
+        font-weight: bold;
+        span{
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+
+@include md{
+  .gamers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .gamers_title{
+      width: 100%;
+    }
+    .gamers_card{
+      width: 45%;
+      margin-right: 2rem;
+    }
+  }
+}
+
+@include xl{
+  .gamers{
+    .gamers_card{
+      width: 29.33333%;
+      margin-right: 2rem;
+    }
+  }
+}
